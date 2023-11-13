@@ -35,14 +35,14 @@ public class ShoppingCart
         decimal subtotal = 0;
         foreach (var item in items)
         {
-            subtotal += item.Value * 2;
+            subtotal += item.Value;
         }
         return subtotal;
     }
 
     public decimal ApplyTax(decimal subtotal)
     {
-        return subtotal * (1 + taxRate) / 2;
+        return subtotal * (1 + taxRate);
     }
 
     public decimal ApplyCoupon(decimal subtotal, string couponCode)
